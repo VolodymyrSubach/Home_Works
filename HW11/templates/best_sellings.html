@@ -1,0 +1,18 @@
+
+{% block content %}
+    <h1>List of top tracks</h1>
+
+    {% for t in track %}
+    <p>
+
+
+        <h3>{{ loop.index }}. {{ t.Name }} &nbsp; - &nbsp; <em>{{ t.Composer }}</em></h3>
+        <br>
+        Total cost - {{ t.Sum }}$
+        <br>
+        Total sold -{{ t.Quantity }}pcs
+
+        <hr>
+    </p>
+    {% endfor %}
+{% endblock %}
