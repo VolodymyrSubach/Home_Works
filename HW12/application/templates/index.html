@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Currency calculator </title>
+</head>
+<body>
+    <div>
+        <strong>Popular Currency </strong>
+        <form method="get" action="{{ url_for('get_value') }}">
+        <a href={{ url_for('get_value', currency = 'usd') }}>USD</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+        <a href={{ url_for('get_value', currency = 'eur') }}>EUR</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+        <a href={{ url_for('get_value', currency = 'gbp') }}>GBP</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+            <input placeholder="Search" name="currency">
+            <button type="submit">Search</button>
+
+        </form>
+    </div>
+    <hr>
+ {% block content %}
+ {% endblock %}
+</body>
+</html>
